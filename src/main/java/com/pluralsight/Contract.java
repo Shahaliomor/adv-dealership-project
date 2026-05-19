@@ -3,13 +3,13 @@ package com.pluralsight;
 public abstract class Contract {
     private String date;
     private String customerName;
-    private String cusromerEmail;
+    private String customerEmail;
     private Vehicle vehicleSold;
 
-    public Contract(String date, String customerName, String cusromerEmail,Vehicle vehicleSold ) {
+    public Contract(String date, String customerName, String customerEmail,Vehicle vehicleSold ) {
         this.date = date;
         this.customerName = customerName;
-        this.cusromerEmail = cusromerEmail;
+        this.customerEmail = customerEmail;
         this.vehicleSold = vehicleSold;
     }
 
@@ -21,8 +21,12 @@ public abstract class Contract {
         return customerName;
     }
 
-    public String getCusromerEmail() {
-        return cusromerEmail;
+    public Vehicle getVehicleSold() {
+        return vehicleSold;
+    }
+
+    public String getCustomerEmail() {
+        return customerEmail;
     }
 
     public abstract double getTotalPrice();
